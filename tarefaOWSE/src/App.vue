@@ -2,17 +2,16 @@
 	<div id="app">
 		Digite o status:
 		<input type="text" v-model="status" >
-		<showStatus :status="this.status"/>
+		<showStatus :status="status"/>
 	</div>
 </template>
 
 <script>
-import AppUsuario from "./components/Usuario.vue";
 import showStatus from "./components/show-status-ativo-inativo.vue"
 
 export default {
 	name: "app",
-	components: { AppUsuario,showStatus },
+	components: { showStatus },
 	data(){
 		return{
 			status: ''
